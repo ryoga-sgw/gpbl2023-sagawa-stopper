@@ -3,27 +3,25 @@ radio.onReceivedNumber(function (receivedNumber) {
         basic.showNumber(1)
         servos.P1.setAngle(55)
         basic.pause(300)
-        servos.P1.setAngle(90)
     }
     if (receivedNumber == 2) {
+        basic.showIcon(IconNames.Heart)
         basic.showNumber(2)
-        servos.P1.setAngle(125)
-        basic.pause(300)
-        servos.P1.setAngle(90)
+        servos.P1.setAngle(110)
+        basic.pause(280)
     }
     if (receivedNumber == 3) {
         basic.showNumber(3)
-        servos.P2.setAngle(55)
+        servos.P2.setAngle(30)
         basic.pause(300)
-        servos.P2.setAngle(90)
     }
     if (receivedNumber == 4) {
         basic.showNumber(4)
-        servos.P2.setAngle(125)
-        basic.pause(300)
-        servos.P2.setAngle(90)
+        servos.P2.setAngle(130)
+        basic.pause(320)
     }
-    OLED.writeStringNewLine("thank you!")
+    servos.P1.setAngle(90)
+    servos.P2.setAngle(90)
     basic.pause(5000)
     number = 1
     flag1 = 0
@@ -32,6 +30,8 @@ radio.onReceivedNumber(function (receivedNumber) {
 let flag1 = 0
 let flag2 = 0
 let number = 0
+servos.P2.setAngle(90)
+servos.P1.setAngle(90)
 basic.showLeds(`
     . # # # .
     # . . . #
